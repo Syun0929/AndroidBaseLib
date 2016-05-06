@@ -1,7 +1,10 @@
-package com.zjy.baselibrary.Log;
+package com.zjy.baselibrary.log;
 
 import android.text.TextUtils;
 import android.util.Log;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 日志的公用方法
@@ -39,6 +42,17 @@ public class Util {
         }
     }
 
+    public static void printFile(String tag,String msg){
+        StackTraceElement st = Thread.currentThread().getStackTrace()[4];// 获取当前线程的堆栈信息
+        if (TextUtils.isEmpty(tag)) {
+            tag = st.getFileName();
+        }
+
+        String mess = getLogFileString(msg,st);
+
+        printFile(tag,mess);
+    }
+
     /**
      * 在logcat的输出格式
      * @param msg
@@ -64,6 +78,24 @@ public class Util {
                 .append(st.getMethodName()).append(" ]");
         return sb.toString();
 
+    }
+
+    /**
+     * 在文件中的输出格式
+     * @param msg
+     * @param st
+     * @return
+     */
+    public static String getLogFileString(String msg, StackTraceElement st) {
+
+        StringBuilder sb = new StringBuilder("");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// 日期时间格式
+        String date = sdf.format(new Date());
+        // 在文件中的输出格式
+
+        sb.append("\n{ ").append(date).append("  ").append(getTraceInfo(st)).append(msg).append(" }\r\n");
+
+        return sb.toString();
     }
 
     private static void printDefault(int type, String tag, String msg) {

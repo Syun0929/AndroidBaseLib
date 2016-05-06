@@ -1,4 +1,4 @@
-package com.zjy.baselibrary.Log;
+package com.zjy.baselibrary.log;
 
 /**
  * 日志等级，分别为verbose,debug,info,warn,error

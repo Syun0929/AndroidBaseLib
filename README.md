@@ -1,9 +1,11 @@
 # AndroidBaseLib
-一个android基础类库，方便开发，目前先添加日志框架
+一个android基础类库，集合各种基础的公共操作, 方便开发, 目前只有日志框架
 
 ###version
 
-v1.1 初始版本,只有日志框架,可以打印行号,点击跳转
+v1.1 初始版本,只有日志框架, 可以打印行号, 点击跳转
+
+v1.2 日志框架添加保存到文件的功能, 使用前先在application全局类初始化日志文件目录
 
 ####How to use
 [![](https://jitpack.io/v/Syun0929/AndroidBaseLib.svg)](https://jitpack.io/#Syun0929/AndroidBaseLib)
