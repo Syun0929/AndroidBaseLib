@@ -22,5 +22,5 @@ Add it in your root build.gradle at the end of repositories:
 **Step 2.** Add the dependency
 
 	dependencies {
-		    compile 'com.github.Syun0929:AndroidBaseLib:v1.1'
+		    compile 'com.github.Syun0929:AndroidBaseLib:v1.2'
 	}
