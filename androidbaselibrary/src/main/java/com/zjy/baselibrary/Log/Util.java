@@ -48,9 +48,9 @@ public class Util {
             tag = st.getFileName();
         }
 
-        String mess = getLogFileString(msg,st);
+        String mess = getLogFileString(tag,msg,st);
 
-        printFile(tag,mess);
+        FileLogUtil.saveLogInSdcard(mess);
     }
 
     /**
@@ -86,14 +86,14 @@ public class Util {
      * @param st
      * @return
      */
-    public static String getLogFileString(String msg, StackTraceElement st) {
+    public static String getLogFileString(String tag, String msg, StackTraceElement st) {
 
         StringBuilder sb = new StringBuilder("");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");// 日期时间格式
         String date = sdf.format(new Date());
         // 在文件中的输出格式
 
-        sb.append("\n{ ").append(date).append("  ").append(getTraceInfo(st)).append(msg).append(" }\r\n");
+        sb.append("\n{ ").append(date).append("  ").append(tag).append(getTraceInfo(st)).append(msg).append(" }\r\n");
 
         return sb.toString();
     }
