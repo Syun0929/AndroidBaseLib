@@ -4,11 +4,12 @@ package com.zjy.baselibrary.log;
 import android.text.TextUtils;
 
 /**
- * 日志框架。
- * 1.只输出级别大于LOG_LEVEL的日志 。
- * 2.点击跳转
- * 3.打印代码行号
- * 4.支持打印日志文件到sd卡,日志文件目录由使用者自行初始化
+ * 日志框架。<br>
+ * 1.只输出级别大于LOG_LEVEL的日志 。<br>
+ * 2.点击跳转<br>
+ * 3.打印代码行号<br>
+ * 4.支持打印日志文件到sd卡,日志文件目录由使用者自行初始化<br>
+ * <br>
  * Created by jiyoung.tsang on 16/4/21.
  */
 public class LogLib {

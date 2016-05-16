@@ -18,12 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        LogLib.d("hello android log!");
-        LogLib.e("Friday", "happy weekend!");
-        LogLib.w("日志框架。\n" +
-                " 1.只输出级别大于LOG_LEVEL的日志 。\n" +
-                " 2.点击跳转\n" +
-                " 3.打印代码行号");
+        LogLib.d("aaa");
 
     }
 
